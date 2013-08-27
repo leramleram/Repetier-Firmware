@@ -606,7 +606,6 @@ STEPPER_CURRENT_CONTROL
 #define SDPOWER          -1
 #define SDSS          16 // SCL pin of I2C header
 #define LED_PIN         -1    //changed @ rkoeppl 20110410
-#define TEMP_1_PIN      -1    //changed @ rkoeppl 20110410
 #define FAN_PIN         -1    //changed @ rkoeppl 20110410
 #define PS_ON_PIN       -1    //changed @ rkoeppl 20110410
 //our pin for debugging.
@@ -761,7 +760,7 @@ STEPPER_CURRENT_CONTROL
 #define TEMP_1_PIN          6   // MUST USE ANALOG INPUT NUMBERING NOT DIGITAL OUTPUT NUMBERING!!!!!!!!! (pin 34 bed)
 #define TEMP_2_PIN         -1
 #define SDPOWER            -1
-#define SDSS               31
+#define SDSS               37 // 31
 #define SCK_PIN          7
 #define MISO_PIN         6
 #define MOSI_PIN         5
@@ -1301,7 +1300,7 @@ STEPPER_CURRENT_CONTROL
 #if MOTHERBOARD == 301
 #define KNOWN_BOARD
 /*****************************************************************
-* Rambo Pin Assignments
+* RAMBo Pin Assignments
 ******************************************************************/
 
 #ifndef __AVR_ATmega2560__
@@ -1338,11 +1337,11 @@ STEPPER_CURRENT_CONTROL
 #define HEATER_0_PIN   9
 #define TEMP_0_PIN     0
 
-#define HEATER_1_PIN   7
-#define TEMP_1_PIN     1
+#define HEATER_1_PIN   3
+#define TEMP_1_PIN     2
 
-#define HEATER_2_PIN   -1
-#define TEMP_2_PIN     -1
+#define HEATER_2_PIN   7
+#define TEMP_2_PIN     1
 
 #define E0_STEP_PIN    34
 #define E0_DIR_PIN     43
@@ -1540,7 +1539,6 @@ STEPPER_CURRENT_CONTROL
 #if NUM_EXTRUDER<3
 #define E2_PINS
 #endif
-
 #define SENSITIVE_PINS {0, 1, X_STEP_PIN, X_DIR_PIN, X_ENABLE_PIN, X_MIN_PIN, X_MAX_PIN, Y_STEP_PIN, Y_DIR_PIN, Y_ENABLE_PIN, Y_MIN_PIN, Y_MAX_PIN, Z_STEP_PIN, Z_DIR_PIN, Z_ENABLE_PIN, Z_MIN_PIN, Z_MAX_PIN, LED_PIN, PS_ON_PIN, \
                         HEATER_0_PIN, HEATER_1_PIN, FAN_PIN, E0_PINS E1_PINS E2_PINS TEMP_0_PIN, TEMP_1_PIN,SDSS }
 #endif
